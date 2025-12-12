@@ -4,20 +4,20 @@ import numpy as np
 model = joblib.load("models/model.pkl")
 scaler = joblib.load("models/scaler.pkl")
 
-# Example values
-temperature = 620
-pressure = 40.1
-vibration = 0.011
-fuel_flow = 1700
-rpm = 12000
+# Example sensor inputs
+temperature = 630
+vibration = 0.015
+pressure = 44
+rpm = 12800
+fuel_flow = 2100
 
-features = np.array([
-    temperature, pressure, vibration, fuel_flow, rpm
+values = np.array([
+    temperature, vibration, pressure, rpm, fuel_flow
 ]).reshape(1, -1)
 
-features_scaled = scaler.transform(features)
-pred = model.predict(features_scaled)[0]
-prob = model.predict_proba(features_scaled).max()
+scaled_values = scaler.transform(values)
+pred = model.predict(scaled_values)[0]
+prob = model.predict_proba(scaled_values).max()
 
 print(f"\nPrediction: {pred}")
 print(f"Probability: {prob:.4f}")
