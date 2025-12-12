@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Initial commit – predictive maintenance system"
+git branch -M main
+git remote add origin https://github.com/tamanna47/Predictive-Maintenance-Aircraft.git
+git push -u origin main
