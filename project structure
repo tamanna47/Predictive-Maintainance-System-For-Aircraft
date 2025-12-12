@@ -1,0 +1,19 @@
+Predictive-Maintenance-System-Aircraft/
+│── data/
+│ └── aircraft_engine_data.csv
+│
+│── models/
+│ ├── model.pkl
+│ ├── scaler.pkl
+│
+│── app.py # Flask API
+│── train_model.py # ML training script
+│── predict.py # Local prediction script
+│── requirements.txt
+│── README.md
+│── .gitignore
+
+Algorithms supported:
+- RandomForestClassifier  
+- XGBoost  
+- ANN (Keras)
